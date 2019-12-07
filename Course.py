@@ -1,12 +1,14 @@
 class Course:
     """
 :field serial: The serial number of the course in the database.
-:field name: The name of the course.
+:field course_name: The name of the course.
+:field proffesor_name: the name of the proffesor.
 :field tests: A list of the tests in the course's history.
 """
     def __init__(self, serial, name, tests=[]):
         self.serial = serial
-        self.name = name
+        self.course_name = course_name
+        self.proffesor_name = proffesor_name
         self.tests = tests
 
     def add_test(self, test):

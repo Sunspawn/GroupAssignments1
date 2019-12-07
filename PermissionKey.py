@@ -17,3 +17,6 @@ def lecturer_key():
 
 def coordinator_key():
     return PermissionKey(access_staff=True)
+
+def goverment_key():
+    return PermissionKey(access_questions=False, access_answers=False)

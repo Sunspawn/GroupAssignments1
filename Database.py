@@ -2,6 +2,7 @@ from PermissionKey import PermissionKey
 from Course import Course
 from Test import Test
 from Question import Question
+import json
 
 
 class Database:
@@ -48,4 +49,18 @@ class Database:
             return False
         if question.serial not in self.questions.keys():
             self.questions[question.serial] = question
-        return True
+            return True
+        return False
+
+    def writeData(self, obj):
+        with open("database.json", "a+") as writeToFile:
+            tobj = obj.__dict__
+            json.dump(tobj, writeToFile)
+
+    def readData(self):
+        data = []
+        with open("database.json", "r+") as readFromFile:
+            for line in readFromFile:
+                data.append(json.loads(line))
+        return data
+

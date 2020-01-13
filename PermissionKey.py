@@ -12,14 +12,11 @@ class PermissionKey:
         self.access_answers = access_answers
         self.access_staff = access_staff
 
+    def student_key(self):
+        return PermissionKey(access_questions=False, access_answers=False)
 
-def student_key():
-    return PermissionKey(access_questions=False, access_answers=False)
+    def lecturer_key(self):
+        return PermissionKey()
 
-
-def lecturer_key():
-    return PermissionKey()
-
-
-def coordinator_key():
-    return PermissionKey(access_staff=True)
+    def coordinator_key(self):
+        return PermissionKey(access_staff=True)

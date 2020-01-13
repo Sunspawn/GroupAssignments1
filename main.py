@@ -1,13 +1,12 @@
 """Main menu of the project.
 """
 
-import PermissionKey
-import PDFconvert
-import addImgToDocx
-import manageData
+from Database import Database
 from Question import Question
+from Question import SubQuestion
+from PermissionKey import PermissionKey
 
-login_keys = {'1': PermissionKey.coordinator_key(),
+"""login_keys = {'1': PermissionKey.coordinator_key(),
               '2': PermissionKey.lecturer_key(),
               '3': PermissionKey.student_key()}
 
@@ -22,4 +21,18 @@ elif option == '3':
     addImgToDocx.addImgToDocx()
 elif option == '4':
     question = Question(12314,"asd","aaa","topic","subject","A",True,"Full")
-    manageData.writeData(question)
+    manageData.writeData(question)"""
+
+key = PermissionKey.coordinator_key()
+
+q = Question(1, "file", 1, 'sub', 4, True, 'Video')
+
+qq = SubQuestion(2, 'file', 1, 'sub', 5, True, 'Video')
+
+q.add_sub_question(qq)
+
+d = Database()
+
+d.add_question(q, key)
+
+d.writeData(d.questions[0])

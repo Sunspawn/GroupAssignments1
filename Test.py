@@ -1,7 +1,8 @@
 from Question import Question
+from SuperData import SuperData
 
 
-class Test:
+class Test(SuperData):
     """Test class.
 :field serial: The serial number in the database.
 :field year: The year of the test.
@@ -9,13 +10,13 @@ class Test:
 :field specific_date: First, second or the special date.
 :field course: The serial number of the course the test is for.
 :field maker: The lecturer who wrote the test.
-:field questions: A list of the questions in the test.
+:field questions: A set of the questions in the test.
 """
     def __init__(self, serial, year, semester, specific_date, course, maker, questions={}):
         for q in questions:
             if type(q) is not Question:
                 raise TypeError('A non-Question argument in questions.')
-        self.serial = serial
+        SuperData.__init__(self, serial)
         self.year = year
         self.semester = semester
         self.specific_date = specific_date

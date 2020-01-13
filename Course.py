@@ -1,7 +1,8 @@
+from SuperData import SuperData
 from Test import Test
 
 
-class Course:
+class Course(SuperData):
     """
 :field serial: The serial number of the course in the database.
 :field name: The name of the course.
@@ -11,7 +12,7 @@ class Course:
         for t in tests:
             if type(t) is not Test:
                 raise TypeError('Non-Test argument in tests.')
-        self.serial = serial
+        SuperData.__init__(self, serial)
         self.name = name
         self.tests = dict.copy(tests)
 

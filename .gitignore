@@ -1,9 +1,75 @@
-/venv/
-/fiddle.py
 
+# Created by https://www.gitignore.io/api/pydev,python,pycharm,eclipse,visualstudio
+# Edit at https://www.gitignore.io/?templates=pydev,python,pycharm,eclipse,visualstudio
 
-# Created by https://www.gitignore.io/api/python,pycharm,visualstudio
-# Edit at https://www.gitignore.io/?templates=python,pycharm,visualstudio
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+### Eclipse Patch ###
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Annotation Processing
+.apt_generated
+
+.sts4-cache/
 
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
@@ -92,6 +158,9 @@ fabric.properties
 # Markdown Navigator plugin
 .idea/**/markdown-navigator.xml
 .idea/**/markdown-navigator/
+
+### pydev ###
+.pydevproject
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -184,8 +253,6 @@ celerybeat-schedule
 
 # Mr Developer
 .mr.developer.cfg
-.project
-.pydevproject
 
 # mkdocs documentation
 /site
@@ -269,7 +336,6 @@ StyleCopReport.xml
 *_p.c
 *_h.h
 *.ilk
-*.meta
 *.obj
 *.iobj
 *.pch
@@ -282,7 +348,6 @@ StyleCopReport.xml
 *.tlb
 *.tli
 *.tlh
-*.tmp
 *.tmp_proj
 *_wpftmp.csproj
 *.log
@@ -548,7 +613,4 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-# End of https://www.gitignore.io/api/python,pycharm,visualstudio
-/.vs/
-/popplerBin/
-/pdf2image/
+# End of https://www.gitignore.io/api/pydev,python,pycharm,eclipse,visualstudio

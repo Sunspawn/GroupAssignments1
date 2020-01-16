@@ -52,15 +52,12 @@ class Database:
             return True
         return False
 
-    def writeData(self, obj):
-        with open("database.json", "a+") as writeToFile:
-            tobj = obj.__dict__
-            json.dump(tobj, writeToFile)
+    def writeData(obj):
+        with open("database.json", "w") as writeToFile:
+            json.dump(obj, writeToFile)
 
-    def readData(self):
-        data = []
-        with open("database.json", "r+") as readFromFile:
-            for line in readFromFile:
-                data.append(json.loads(line))
-        return data
+    def readData():
+        with open("database.json", "r") as readFromFile:
+            dict = json.load(readFromFile)
+            return dict
 

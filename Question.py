@@ -22,6 +22,9 @@ class Question(SuperData):
         self.answer_type = answer_type
         self.sub_questions = sub_questions
 
+    def __str__(self):
+        return("serial number: " + self.serial)
+
     def add_sub_question(self, sub):
         for q in self.sub_questions:
             if sub.serial == q.serial:

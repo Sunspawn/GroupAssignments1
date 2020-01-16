@@ -1,4 +1,4 @@
-﻿Search engibe for questions.
+﻿Search engine for questions.
 
 # Description:
 The program has a search engine using python.
@@ -13,11 +13,4 @@ The system allows the professor to rate the questions difficulty and sorts the q
 
 ## Installs:
 pip install python-docx.
-
-pip install pillow.
-
-need to add popplerBin to the work path.
-
-
-
 
